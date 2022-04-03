@@ -21,5 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+//Login -> localhost:8000/api/login
 Route::post('/login', [LoginController::class, 'create']);
+
+//Register -> localhost:8000/api/register
 Route::post('/register', [LoginController::class, 'store']);
